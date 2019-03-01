@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 # latest LTS
 
 RUN apt-get -y update && \

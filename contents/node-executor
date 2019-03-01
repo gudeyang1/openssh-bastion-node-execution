@@ -51,7 +51,7 @@ SSH_ARGS=($RD_CONFIG_SSH_OPTS -F "$SSH_CONFIG_FILE")
 [[ -n "${NODE_IDENTITY_FILE:-}" ]] && SSH_ARGS=(${SSH_ARGS[@]} -i "$NODE_IDENTITY_FILE")
 
 ssh "${SSH_ARGS[@]}" \
-   "${RD_NODE_USERNAME}@${RD_NODE_HOSTNAME}" \
+   "rundeck@${RD_NODE_IP}" \
    "$@"
 
 exit $?

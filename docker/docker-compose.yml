@@ -21,7 +21,7 @@ services:
       - mysql
       - bastion
     environment:
-      - RUNDECK_GRAILS_URL=http://localhost:8080
+      - RUNDECK_GRAILS_URL=http://192.168.232.150:8080
       - RUNDECK_DATABASE_DRIVER=com.mysql.jdbc.Driver
       - RUNDECK_DATABASE_URL=jdbc:mysql://mysql:3306/rundeckdb?autoReconnect=true&useSSL=false
       - RUNDECK_DATABASE_USERNAME=rundeck
@@ -37,7 +37,7 @@ services:
     links:
       - rundeck
     environment:
-      - RUNDECK_URL=http://localhost:8080
+      - RUNDECK_URL=http://192.168.232.150:8080
       - RUNDECK_NODE_URL=http://rundeck:4440
       - RUNDECK_USER=admin
       - RUNDECK_PASSWORD=admin
