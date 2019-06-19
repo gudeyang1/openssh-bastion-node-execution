@@ -26,6 +26,11 @@ services:
       - RUNDECK_DATABASE_URL=jdbc:mysql://mysql:3306/rundeckdb?autoReconnect=true&useSSL=false
       - RUNDECK_DATABASE_USERNAME=rundeck
       - RUNDECK_DATABASE_PASSWORD=rundeck123.
+      - RUNDECK_MAIL_FROM=s1prnrund01@wdprapps.disney.com
+      - RUNDECK_MAIL_SMTP_HOST=smtp.wdprapps.disney.com
+      - RUNDECK_MAIL_SMTP_PORT=25
+      - RUNDECK_MAIL_SMTP_USERNAME=gudeyang
+      - RUNDECK_MAIL_PROPS=["mail.smtp.starttls.enable":"true","mail.smtp.port":"25"]
     volumes:
       - ${PWD}/data/bastion_id_rsa:/home/rundeck/.ssh/bastion_id_rsa
       - ${PWD}/data/node_id_rsa:/home/rundeck/.ssh/node_id_rsa

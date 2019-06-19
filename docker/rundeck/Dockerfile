@@ -1,4 +1,5 @@
-FROM rundeck/rundeck:3.0.13
+#FROM rundeck/rundeck:3.0.21
+FROM 2 
 
 USER root
 
@@ -91,7 +92,7 @@ ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:$PATH
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME" &&  gem install etcd mixlib-cli
 
 ##########################################
-#ruby stop
+#ruby end
 
 
 #set rundeck password
